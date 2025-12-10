@@ -6,7 +6,6 @@ This code is written by Sassibekie1234.
 '''
 
 def encrypt(text):
-    lines = len(text)
     print("Still working on this")
 
 def decrypt(text):
@@ -40,4 +39,3 @@ while True:
        
 # ask for the key/password
 key = getpass.getpass(prompt = "Enter your key:")
-# make a new file containing the encrypted/decrypted text

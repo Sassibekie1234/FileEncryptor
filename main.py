@@ -19,7 +19,7 @@ print("This is beeing worked on")
 filename = input("What file do you wanna encrypt? ")
 with open(filename, "r") as file:
     content = file.read()
-    
+
 # ask wether they want to encrypt or decrypt
 while True:
     action = input("Do you wanna encrpyt of decrypt? ")
@@ -37,8 +37,7 @@ while True:
        print("Didn't get that...")
        print("To exit press CTRL + C")
        print("Or try again: ")
-
-
+       
 # ask for the key/password
 key = getpass.getpass(prompt = "Enter your key:")
 # make a new file containing the encrypted/decrypted text

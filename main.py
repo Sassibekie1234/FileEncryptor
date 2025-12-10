@@ -15,14 +15,32 @@ def decrypt(text):
 print("Hello, World!")
 print("This is beeing worked on")
 
-filename = input("What file do you wanna encrypt?")
-with open("testfile.txt", "r") as file:
+# Opening the file and loading it into memory
+filename = input("What file do you wanna encrypt? ")
+with open(filename, "r") as file:
     content = file.read()
-    print(content)
+
 
 
 # ask wether they want to encrypt or decrypt
-action = input("Do you wanna encrpyt of decrypt? ")
+while True:
+    action = input("Do you wanna encrpyt of decrypt? ")
+    if action.lower == "encrypt":
+       print("Yessir!")
+       encrypt(content)
+       break
+
+    elif action.lower == "decrypt":
+        print("Yessir")
+        decrypt(content)
+        break
+
+    else:
+       print("Didn't get that...")
+       print("To exit press CTRL + C")
+       print("Or try again: ")
+
+
 # ask for the key/password
 key = getpass.getpass(prompt = "Enter your key:")
 # make a new file containing the encrypted/decrypted text

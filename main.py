@@ -19,9 +19,7 @@ print("This is beeing worked on")
 filename = input("What file do you wanna encrypt? ")
 with open(filename, "r") as file:
     content = file.read()
-
-
-
+    
 # ask wether they want to encrypt or decrypt
 while True:
     action = input("Do you wanna encrpyt of decrypt? ")

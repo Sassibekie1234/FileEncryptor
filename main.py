@@ -16,7 +16,7 @@ print("Hello, World!")
 print("This is beeing worked on")
 
 filename = input("What file do you wanna encrypt?")
-with open("geek.txt", "r") as file:
+with open("testfile.txt", "r") as file:
     content = file.read()
     print(content)
 
@@ -26,5 +26,3 @@ action = input("Do you wanna encrpyt of decrypt? ")
 # ask for the key/password
 key = getpass.getpass(prompt = "Enter your key:")
 # make a new file containing the encrypted/decrypted text
-
-

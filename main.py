@@ -22,12 +22,12 @@ with open(filename, "r") as file:
 # ask wether they want to encrypt or decrypt
 while True:
     action = input("Do you wanna encrpyt of decrypt? ")
-    if action.lower == "encrypt":
+    if action == "encrypt":
        print("Yessir!")
        encrypt(content)
        break
 
-    elif action.lower == "decrypt":
+    elif action == "decrypt":
         print("Yessir")
         decrypt(content)
         break

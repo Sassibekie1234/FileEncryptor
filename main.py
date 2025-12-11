@@ -24,7 +24,8 @@ def encrypt(plain_text):
            # If the character is not an alphabet letter, keep it unchanged.
            encrypted_text += plain_text[i]
    # Return the final encrypted text
-   return encrypted_text
+   encryptedfile = open(f"{filename}-encrypted", "w")
+   encryptedfile.write(encrypted_text)
 
 # Decryption function for the Vigenère cipher
 def decrypt(cipher_text):
@@ -46,13 +47,17 @@ def decrypt(cipher_text):
             # If the character is not an alphabet letter, keep it unchanged
             decrypted_text += cipher_text[i]
     # Return the final decrypted text
-    return decrypted_text
+    decryptedfile = open(f"{filename}-decrypted", "w")
+    decryptedfile.write(decrypted_text)
 
 
 # Opening the file and loading it into memory
 filename = input("What file do you wanna encrypt/decrypt? ")
 with open(filename, "r") as file:
     content = file.read()
+
+# ask for the key/password
+key = getpass.getpass(prompt = "Enter your key:")
 
 # ask wether they want to encrypt or decrypt
 while True:
@@ -71,6 +76,3 @@ while True:
        print("Didn't get that...")
        print("To exit press CTRL + C")
        print("Or try again: ")
-       
-# ask for the key/password
-key = getpass.getpass(prompt = "Enter your key:")
